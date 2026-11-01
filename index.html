@@ -17,137 +17,7 @@
 <meta name="twitter:image" content="https://organizedopskits.com/img/hero.jpg">
 <meta name="theme-color" content="#6E4F4A">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<style>
-:root, [data-theme="cozy"] {
-  --surface:#FAF6F0; --panel:#EBD9D3; --panel-soft:#F3EAE6; --badge:#A8B5A0; --on-badge:#2F3A2A;
-  --action:#6E4F4A; --on-action:#FAF6F0; --text:#2F2A28; --muted:#6E4F4A; --card:#FFFFFF;
-  --btn-radius:999px; --radius:12px; --line:#E4D6D0;
-}
-[data-theme="jobsite"] {
-  --surface:#F6F3EC; --panel:#C9C6BF; --panel-soft:#E6E4DF; --badge:#E8652B; --on-badge:#2B2D2F;
-  --action:#2B2D2F; --on-action:#F6F3EC; --text:#2B2D2F; --muted:#4A6378; --card:#FFFFFF;
-  --btn-radius:4px; --radius:6px; --line:#D3D0C9;
-}
-* { box-sizing:border-box; }
-html { scroll-behavior:smooth; }
-body { margin:0; background:var(--surface); color:var(--text); font-family:Arial, Helvetica, sans-serif; font-size:17px; line-height:1.6; transition:background .25s, color .25s; }
-img { max-width:100%; height:auto; display:block; }
-a { color:inherit; }
-.wrap { max-width:1120px; margin:0 auto; padding:0 20px; }
-.btn { display:inline-block; background:var(--action); color:var(--on-action); text-decoration:none; font-weight:700; padding:13px 26px; border-radius:var(--btn-radius); border:2px solid var(--action); font-size:16px; }
-.btn.ghost { background:transparent; color:var(--action); }
-.btn:hover { opacity:.9; }
-.kicker { text-transform:uppercase; letter-spacing:2px; font-size:13px; font-weight:700; color:var(--muted); margin:0 0 8px; }
-h1, h2, h3 { line-height:1.15; margin:0; }
-h1 { font-size:clamp(34px, 5vw, 54px); }
-h2 { font-size:clamp(28px, 3.6vw, 40px); }
-h3 { font-size:19px; }
-.lead { font-size:19px; color:var(--muted); margin:16px 0 28px; max-width:560px; }
-section { padding:72px 0; }
-.alt { background:var(--panel-soft); }
-
-/* bar + header */
-.bar { background:var(--action); color:var(--on-action); text-align:center; font-size:14px; padding:8px 12px; font-weight:700; }
-header { position:sticky; top:0; z-index:10; background:var(--surface); border-bottom:1px solid var(--line); }
-header .wrap { display:flex; align-items:center; gap:24px; height:68px; }
-.logo { font-weight:700; font-size:21px; text-decoration:none; display:flex; align-items:center; gap:10px; }
-.logo svg { width:30px; height:30px; }
-nav { display:flex; gap:22px; margin-left:auto; }
-nav a { text-decoration:none; font-size:15px; font-weight:700; color:var(--muted); }
-nav a:hover { color:var(--text); }
-.nav-etsy { display:none; }
-section { scroll-margin-top:72px; }
-header .btn { padding:9px 18px; font-size:14px; }
-.menu-btn { display:none; margin-left:auto; background:transparent; border:1px solid var(--line); border-radius:var(--btn-radius); padding:8px 14px; font:inherit; font-size:15px; font-weight:700; color:var(--text); cursor:pointer; align-items:center; gap:8px; }
-.menu-btn svg { width:18px; height:18px; stroke:currentColor; stroke-width:2; stroke-linecap:round; }
-
-/* theme switch */
-.switch { display:inline-flex; background:var(--panel); border-radius:var(--btn-radius); padding:4px; gap:4px; }
-.switch button { border:0; background:transparent; font:inherit; font-size:14px; font-weight:700; padding:8px 16px; border-radius:var(--btn-radius); cursor:pointer; color:var(--text); display:flex; align-items:center; gap:8px; }
-.switch button[aria-pressed="true"] { background:var(--card); box-shadow:0 1px 3px rgba(0,0,0,.12); }
-.dot { width:11px; height:11px; border-radius:50%; display:inline-block; }
-
-/* hero */
-.hero { padding:56px 0 64px; }
-.hero .wrap { display:grid; grid-template-columns:1.05fr 1fr; gap:48px; align-items:center; }
-.hero img { border-radius:var(--radius); box-shadow:0 12px 32px rgba(40,30,25,.14); }
-.trust { display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:28px; font-size:14px; font-weight:700; color:var(--muted); padding:0; list-style:none; }
-.trust li::before { content:"✓"; display:inline-block; width:20px; height:20px; line-height:20px; text-align:center; border-radius:50%; background:var(--badge); color:var(--on-badge); font-size:12px; margin-right:7px; }
-
-/* themes */
-.themes .wrap { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
-.themes img { border-radius:var(--radius); }
-.swatches { display:flex; gap:28px; margin:22px 0 26px; flex-wrap:wrap; }
-.swatches div { font-size:14px; font-weight:700; }
-.swatches span { display:inline-block; width:22px; height:22px; border-radius:50%; margin-right:-6px; border:2px solid var(--surface); }
-
-/* shop */
-.head { display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap; margin-bottom:28px; }
-.group-title { font-size:15px; text-transform:uppercase; letter-spacing:1.5px; color:var(--muted); margin:36px 0 14px; }
-.grid { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:18px; }
-.card { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:22px; display:flex; flex-direction:column; gap:10px; text-decoration:none; transition:transform .15s, box-shadow .15s; }
-.card:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(40,30,25,.10); }
-.card p { margin:0; color:var(--muted); font-size:15px; line-height:1.5; flex:1; }
-.card .go { font-weight:700; font-size:14px; color:var(--action); }
-.tag { align-self:flex-start; background:var(--badge); color:var(--on-badge); font-size:12px; font-weight:700; padding:3px 10px; border-radius:var(--btn-radius); }
-.icon { width:42px; height:42px; border-radius:10px; background:var(--panel); display:flex; align-items:center; justify-content:center; }
-.icon svg { width:22px; height:22px; stroke:var(--action); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
-
-/* bundle */
-.bundle { background:var(--action); color:var(--on-action); border-radius:var(--radius); padding:40px; display:grid; grid-template-columns:1.4fr 1fr; gap:32px; align-items:center; margin-top:40px; }
-.bundle h2 { color:var(--on-action); }
-.bundle ul { margin:16px 0 0; padding-left:20px; }
-.bundle .btn { background:var(--on-action); color:var(--action); border-color:var(--on-action); }
-.bundle .kicker { color:var(--on-action); opacity:.8; }
-
-/* steps */
-.steps { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:20px; margin-top:32px; counter-reset:s; }
-.step { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:26px; }
-.step::before { counter-increment:s; content:counter(s); display:flex; width:38px; height:38px; border-radius:50%; background:var(--action); color:var(--on-action); align-items:center; justify-content:center; font-weight:700; margin-bottom:14px; }
-.step p { margin:8px 0 0; color:var(--muted); font-size:15px; }
-
-/* custom */
-.custom .wrap { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
-.checklist { list-style:none; padding:0; margin:20px 0 28px; }
-.checklist li { padding:9px 0 9px 34px; position:relative; border-bottom:1px solid var(--line); }
-.checklist li::before { content:"✓"; position:absolute; left:0; top:9px; width:22px; height:22px; line-height:22px; text-align:center; border-radius:50%; background:var(--badge); color:var(--on-badge); font-size:12px; font-weight:700; }
-.custom img { border-radius:var(--radius); }
-
-/* faq */
-.faq { max-width:780px; margin:28px auto 0; }
-details { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); margin-bottom:12px; }
-summary { cursor:pointer; padding:18px 22px; font-weight:700; list-style:none; display:flex; justify-content:space-between; gap:16px; }
-summary::-webkit-details-marker { display:none; }
-summary::after { content:"+"; font-size:22px; line-height:1; color:var(--action); }
-details[open] summary::after { content:"−"; }
-details p { margin:0; padding:0 22px 20px; color:var(--muted); }
-.center { text-align:center; }
-
-/* footer */
-footer { background:var(--action); color:var(--on-action); padding:48px 0 32px; }
-footer .wrap { display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap; }
-footer a { color:var(--on-action); text-decoration:none; opacity:.9; }
-footer a:hover { opacity:1; text-decoration:underline; }
-footer ul { list-style:none; padding:0; margin:10px 0 0; line-height:2; }
-footer .small { font-size:13px; opacity:.8; width:100%; border-top:1px solid rgba(255,255,255,.2); padding-top:20px; margin-top:12px; }
-
-@media (max-width: 880px) {
-  nav { display:none; position:absolute; top:68px; left:0; right:0; background:var(--surface); border-bottom:1px solid var(--line); box-shadow:0 10px 20px rgba(40,30,25,.10); flex-direction:column; gap:0; padding:8px 20px 16px; margin:0; }
-  header.open nav { display:flex; }
-  nav a { font-size:18px; padding:14px 0; border-bottom:1px solid var(--line); color:var(--text); }
-  nav a.nav-etsy { display:block; border-bottom:0; margin-top:12px; text-align:center; background:var(--action); color:var(--on-action); border-radius:var(--btn-radius); }
-  .menu-btn { display:inline-flex; }
-  .hero .wrap, .themes .wrap, .custom .wrap, .bundle { grid-template-columns:1fr; }
-  .grid, .steps { grid-template-columns:1fr 1fr; }
-  section { padding:52px 0; }
-  .bundle { padding:28px; }
-}
-@media (max-width: 560px) {
-  .grid, .steps { grid-template-columns:1fr; }
-  header .btn { display:none; }
-  .switch button { padding:8px 11px; }
-}
-</style>
+<link rel="stylesheet" href="css/site.css">
 <script type="application/ld+json">
 [
  {
@@ -232,13 +102,13 @@ footer .small { font-size:13px; opacity:.8; width:100%; border-top:1px solid rgb
     "@type": "ListItem",
     "position": 1,
     "name": "Job Costing",
-    "url": "https://www.etsy.com/listing/4588284533"
+    "url": "https://organizedopskits.com/job-costing-spreadsheet/"
    },
    {
     "@type": "ListItem",
     "position": 2,
     "name": "Change Orders and AR",
-    "url": "https://www.etsy.com/listing/4588040457"
+    "url": "https://organizedopskits.com/change-order-template/"
    },
    {
     "@type": "ListItem",
@@ -298,7 +168,7 @@ footer .small { font-size:13px; opacity:.8; width:100%; border-top:1px solid rgb
     "@type": "ListItem",
     "position": 12,
     "name": "Home Maintenance Planner",
-    "url": "https://www.etsy.com/listing/4588764285"
+    "url": "https://organizedopskits.com/home-maintenance-planner/"
    },
    {
     "@type": "ListItem",
@@ -402,8 +272,8 @@ footer .small { font-size:13px; opacity:.8; width:100%; border-top:1px solid rgb
 
     <h3 class="group-title">Construction and contractor templates</h3>
     <div class="grid" id="pro">
-      <a class="card" href="https://www.etsy.com/listing/4588284533"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v10H3z"/><circle cx="12" cy="12" r="2.5"/></svg></div><h3>Job Costing</h3><p>Budget vs actual on every job, so you see profit before it's gone.</p><span class="go">View on Etsy →</span></a>
-      <a class="card" href="https://www.etsy.com/listing/4588040457"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></div><h3>Change Orders and AR</h3><p>Log every change order and see who still owes you.</p><span class="go">View on Etsy →</span></a>
+      <a class="card" href="job-costing-spreadsheet/"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18v10H3z"/><circle cx="12" cy="12" r="2.5"/></svg></div><h3>Job Costing</h3><p>Budget vs actual on every job, so you see profit before it's gone.</p><span class="go">See what\'s inside →</span></a>
+      <a class="card" href="change-order-template/"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg></div><h3>Change Orders and AR</h3><p>Log every change order and see who still owes you.</p><span class="go">See what\'s inside →</span></a>
       <a class="card" href="https://www.etsy.com/listing/4593781227"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><path d="M16 5a3 3 0 0 1 0 6M21 20c0-2.5-1.5-4-3.5-4.7"/></svg></div><span class="tag">New</span><h3>Sales Pipeline Tracker</h3><p>See which estimates went cold, before they're gone.</p><span class="go">View on Etsy →</span></a>
       <a class="card" href="https://www.etsy.com/listing/4588290488"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div><h3>Construction Schedule</h3><p>Gantt chart plus a 2-week lookahead for the crew.</p><span class="go">View on Etsy →</span></a>
       <a class="card" href="https://www.etsy.com/listing/4588141568"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M5 21h14M5 7h14M5 7l-3 7h6zM19 7l-3 7h6z"/></svg></div><h3>Bid Leveling</h3><p>Compare sub bids line by line, apples to apples.</p><span class="go">View on Etsy →</span></a>
@@ -434,7 +304,7 @@ footer .small { font-size:13px; opacity:.8; width:100%; border-top:1px solid rgb
 
     <h3 class="group-title">Home maintenance and homeowner templates</h3>
     <div class="grid" id="home">
-      <a class="card" href="https://www.etsy.com/listing/4588764285"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg></div><span class="tag">2 themes</span><h3>Home Maintenance Planner</h3><p>109 tasks with how-tos, a tax tracker and printables.</p><span class="go">View on Etsy →</span></a>
+      <a class="card" href="home-maintenance-planner/"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg></div><span class="tag">2 themes</span><h3>Home Maintenance Planner</h3><p>109 tasks with how-tos, a tax tracker and printables.</p><span class="go">See what\'s inside →</span></a>
       <a class="card" href="https://www.etsy.com/listing/4589361926"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 13h18M12 9v12M12 9c-3 0-5-1.5-4-3.5S12 6 12 9c0-3 3-5.5 4-3.5S15 9 12 9"/></svg></div><h3>Planner for New Home Buyers</h3><p>A closing gift builders can hand over with the keys.</p><span class="go">View on Etsy →</span></a>
       <a class="card" href="https://www.etsy.com/listing/4589814088"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 13h18M12 9v12M12 9c-3 0-5-1.5-4-3.5S12 6 12 9c0-3 3-5.5 4-3.5S15 9 12 9"/></svg></div><h3>Realtor Closing Gift Edition</h3><p>The planner, ready for an agent to give at closing.</p><span class="go">View on Etsy →</span></a>
       <a class="card" href="https://www.etsy.com/listing/4594874360"><div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17L17 3l4 4L7 21z"/><path d="M7 13l2 2M10 10l2 2M13 7l2 2"/></svg></div><span class="tag">New</span><h3>Renovation Material Calculator</h3><p>Paint, drywall and flooring amounts from your room sizes.</p><span class="go">View on Etsy →</span></a>
@@ -519,17 +389,6 @@ footer .small { font-size:13px; opacity:.8; width:100%; border-top:1px solid rgb
   </div>
 </footer>
 
-<script>
-var hdr = document.querySelector("header"), mb = document.querySelector(".menu-btn");
-mb.addEventListener("click", function(){ var o = hdr.classList.toggle("open"); mb.setAttribute("aria-expanded", o ? "true" : "false"); });
-document.querySelectorAll("#main-nav a").forEach(function(a){ a.addEventListener("click", function(){ hdr.classList.remove("open"); mb.setAttribute("aria-expanded","false"); }); });
-function setTheme(t){
-  document.documentElement.setAttribute("data-theme", t);
-  document.querySelectorAll(".switch button").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.set === t ? "true" : "false"); });
-  try { localStorage.setItem("ook-theme", t); } catch(e) {}
-}
-document.querySelectorAll(".switch button").forEach(function(b){ b.addEventListener("click", function(){ setTheme(b.dataset.set); }); });
-try { var saved = localStorage.getItem("ook-theme"); if (saved === "jobsite" || saved === "cozy") setTheme(saved); } catch(e) {}
-</script>
+<script src="js/site.js"></script>
 </body>
 </html>
