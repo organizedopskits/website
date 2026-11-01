@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cozy">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OrganizedOpsKits | Spreadsheet Templates for Contractors and Homeowners</title>
+<meta name="description" content="Excel and Google Sheets templates for contractors, builders and homeowners. Job costing, change orders, sales pipeline, home maintenance planner and more. Instant download on Etsy.">
+<meta property="og:title" content="OrganizedOpsKits">
+<meta property="og:description" content="Spreadsheets built by someone who does ops for a living. Excel and Google Sheets templates for contractors and homeowners.">
+<meta property="og:image" content="https://organizedopskits.com/img/hero.jpg">
+<meta property="og:url" content="https://organizedopskits.com/">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+:root, [data-theme="cozy"] {
+  --surface:#FAF6F0; --panel:#EBD9D3; --panel-soft:#F3EAE6; --badge:#A8B5A0; --on-badge:#2F3A2A;
+  --action:#6E4F4A; --on-action:#FAF6F0; --text:#2F2A28; --muted:#6E4F4A; --card:#FFFFFF;
+  --btn-radius:999px; --radius:12px; --line:#E4D6D0;
+}
+[data-theme="jobsite"] {
+  --surface:#F6F3EC; --panel:#C9C6BF; --panel-soft:#E6E4DF; --badge:#E8652B; --on-badge:#2B2D2F;
+  --action:#2B2D2F; --on-action:#F6F3EC; --text:#2B2D2F; --muted:#4A6378; --card:#FFFFFF;
+  --btn-radius:4px; --radius:6px; --line:#D3D0C9;
+}
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; background:var(--surface); color:var(--text); font-family:Arial, Helvetica, sans-serif; font-size:17px; line-height:1.6; transition:background .25s, color .25s; }
+img { max-width:100%; display:block; }
+a { color:inherit; }
+.wrap { max-width:1120px; margin:0 auto; padding:0 20px; }
+.btn { display:inline-block; background:var(--action); color:var(--on-action); text-decoration:none; font-weight:700; padding:13px 26px; border-radius:var(--btn-radius); border:2px solid var(--action); font-size:16px; }
+.btn.ghost { background:transparent; color:var(--action); }
+.btn:hover { opacity:.9; }
+.kicker { text-transform:uppercase; letter-spacing:2px; font-size:13px; font-weight:700; color:var(--muted); margin:0 0 8px; }
+h1, h2, h3 { line-height:1.15; margin:0; }
+h1 { font-size:clamp(34px, 5vw, 54px); }
+h2 { font-size:clamp(28px, 3.6vw, 40px); }
+h3 { font-size:19px; }
+.lead { font-size:19px; color:var(--muted); margin:16px 0 28px; max-width:560px; }
+section { padding:72px 0; }
+.alt { background:var(--panel-soft); }
+
+/* bar + header */
+.bar { background:var(--action); color:var(--on-action); text-align:center; font-size:14px; padding:8px 12px; font-weight:700; }
+header { position:sticky; top:0; z-index:10; background:var(--surface); border-bottom:1px solid var(--line); }
+header .wrap { display:flex; align-items:center; gap:24px; height:68px; }
+.logo { font-weight:700; font-size:21px; text-decoration:none; display:flex; align-items:center; gap:10px; }
+.logo svg { width:30px; height:30px; }
+nav { display:flex; gap:22px; margin-left:auto; }
+nav a { text-decoration:none; font-size:15px; font-weight:700; color:var(--muted); }
+nav a:hover { color:var(--text); }
+header .btn { padding:9px 18px; font-size:14px; }
+
+/* theme switch */
+.switch { display:inline-flex; background:var(--panel); border-radius:var(--btn-radius); padding:4px; gap:4px; }
+.switch button { border:0; background:transparent; font:inherit; font-size:14px; font-weight:700; padding:8px 16px; border-radius:var(--btn-radius); cursor:pointer; color:var(--text); display:flex; align-items:center; gap:8px; }
+.switch button[aria-pressed="true"] { background:var(--card); box-shadow:0 1px 3px rgba(0,0,0,.12); }
+.dot { width:11px; height:11px; border-radius:50%; display:inline-block; }
+
+/* hero */
+.hero { padding:56px 0 64px; }
+.hero .wrap { display:grid; grid-template-columns:1.05fr 1fr; gap:48px; align-items:center; }
+.hero img { border-radius:var(--radius); box-shadow:0 12px 32px rgba(40,30,25,.14); }
+.trust { display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:28px; font-size:14px; font-weight:700; color:var(--muted); padding:0; list-style:none; }
+.trust li::before { content:"✓"; display:inline-block; width:20px; height:20px; line-height:20px; text-align:center; border-radius:50%; background:var(--badge); color:var(--on-badge); font-size:12px; margin-right:7px; }
+
+/* themes */
+.themes .wrap { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+.themes img { border-radius:var(--radius); }
+.swatches { display:flex; gap:28px; margin:22px 0 26px; flex-wrap:wrap; }
+.swatches div { font-size:14px; font-weight:700; }
+.swatches span { display:inline-block; width:22px; height:22px; border-radius:50%; margin-right:-6px; border:2px solid var(--surface); }
+
+/* shop */
+.head { display:flex; justify-content:space-between; align-items:flex-end; gap:20px; flex-wrap:wrap; margin-bottom:28px; }
+.group-title { font-size:15px; text-transform:uppercase; letter-spacing:1.5px; color:var(--muted); margin:36px 0 14px; }
+.grid { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:18px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:22px; display:flex; flex-direction:column; gap:10px; text-decoration:none; transition:transform .15s, box-shadow .15s; }
+.card:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(40,30,25,.10); }
+.card p { margin:0; color:var(--muted); font-size:15px; line-height:1.5; flex:1; }
+.card .go { font-weight:700; font-size:14px; color:var(--action); }
+.tag { align-self:flex-start; background:var(--badge); color:var(--on-badge); font-size:12px; font-weight:700; padding:3px 10px; border-radius:var(--btn-radius); }
+.icon { width:42px; height:42px; border-radius:10px; background:var(--panel); display:flex; align-items:center; justify-content:center; }
+.icon svg { width:22px; height:22px; stroke:var(--action); fill:none; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+
+/* bundle */
+.bundle { background:var(--action); color:var(--on-action); border-radius:var(--radius); padding:40px; display:grid; grid-template-columns:1.4fr 1fr; gap:32px; align-items:center; margin-top:40px; }
+.bundle h2 { color:var(--on-action); }
+.bundle ul { margin:16px 0 0; padding-left:20px; }
+.bundle .btn { background:var(--on-action); color:var(--action); border-color:var(--on-action); }
+.bundle .kicker { color:var(--on-action); opacity:.8; }
+
+/* steps */
+.steps { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:20px; margin-top:32px; counter-reset:s; }
+.step { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:26px; }
+.step::before { counter-increment:s; content:counter(s); display:flex; width:38px; height:38px; border-radius:50%; background:var(--action); color:var(--on-action); align-items:center; justify-content:center; font-weight:700; margin-bottom:14px; }
+.step p { margin:8px 0 0; color:var(--muted); font-size:15px; }
+
+/* custom */
+.custom .wrap { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+.checklist { list-style:none; padding:0; margin:20px 0 28px; }
+.checklist li { padding:9px 0 9px 34px; position:relative; border-bottom:1px solid var(--line); }
+.checklist li::before { content:"✓"; position:absolute; left:0; top:9px; width:22px; height:22px; line-height:22px; text-align:center; border-radius:50%; background:var(--badge); color:var(--on-badge); font-size:12px; font-weight:700; }
+.custom img { border-radius:var(--radius); }
+
+/* faq */
+.faq { max-width:780px; margin:28px auto 0; }
+details { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); margin-bottom:12px; }
+summary { cursor:pointer; padding:18px 22px; font-weight:700; list-style:none; display:flex; justify-content:space-between; gap:16px; }
+summary::-webkit-details-marker { display:none; }
+summary::after { content:"+"; font-size:22px; line-height:1; color:var(--action); }
+details[open] summary::after { content:"−"; }
+details p { margin:0; padding:0 22px 20px; color:var(--muted); }
+.center { text-align:center; }
+
+/* footer */
+footer { background:var(--action); color:var(--on-action); padding:48px 0 32px; }
+footer .wrap { display:flex; justify-content:space-between; gap:32px; flex-wrap:wrap; }
+footer a { color:var(--on-action); text-decoration:none; opacity:.9; }
+footer a:hover { opacity:1; text-decoration:underline; }
+footer ul { list-style:none; padding:0; margin:10px 0 0; line-height:2; }
+footer .small { font-size:13px; opacity:.8; width:100%; border-top:1px solid rgba(255,255,255,.2); padding-top:20px; margin-top:12px; }
+
+@media (max-width: 880px) {
+  nav { display:none; }
+  .hero .wrap, .themes .wrap, .custom .wrap, .bundle { grid-template-columns:1fr; }
+  .grid, .steps { grid-template-columns:1fr 1fr; }
+  section { padding:52px 0; }
+  .bundle { padding:28px; }
+}
+@media (max-width: 560px) {
+  .grid, .steps { grid-template-columns:1fr; }
+  header .btn { display:none; }
+  .switch button { padding:8px 11px; }
+}
+</style>
+</head>
+<body>
+
+<div class="bar">Instant download on Etsy · Works in Excel and free Google Sheets</div>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="OrganizedOpsKits home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--action)"/><rect x="7" y="8" width="8" height="5" rx="1.5" fill="var(--on-action)"/><rect x="17" y="8" width="8" height="5" rx="1.5" fill="var(--badge)"/><rect x="7" y="15" width="18" height="3" rx="1.5" fill="var(--on-action)"/><rect x="7" y="20" width="12" height="3" rx="1.5" fill="var(--on-action)"/></svg>
+      OrganizedOpsKits
+    </a>
+    <nav aria-label="Main">
+      <a href="#shop">Shop</a>
+      <a href="#themes">Themes</a>
+      <a href="#custom">Custom work</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn" href="https://www.etsy.com/shop/OrganizedOpsKits">Visit the Etsy shop</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Excel + Google Sheets templates</p>
+      <h1>Spreadsheets built by someone who does ops for a living.</h1>
+      <p class="lead">Less paperwork, more time on the job. Ready-made kits for contractors, builders and homeowners: job costing, change orders, schedules, leads and home upkeep.</p>
+      <a class="btn" href="#shop">Browse the kits</a>
+      <ul class="trust">
+        <li>Instant download</li>
+        <li>No macros</li>
+        <li>2 color themes</li>
+        <li>Help through Etsy messages</li>
+      </ul>
+    </div>
+    <img src="img/hero.jpg" width="1200" height="1200" alt="Home Maintenance Planner dashboard on a laptop, showing overdue tasks and what's next">
+  </div>
+</section>
+
+<section class="themes alt" id="themes">
+  <div class="wrap">
+    <img src="img/themes.jpg" width="1200" height="1200" loading="lazy" alt="The same planner dashboard in the Cozy Workshop and Job Site color themes, side by side">
+    <div>
+      <p class="kicker">New on every kit</p>
+      <h2>Two color themes. Pick the look you like.</h2>
+      <p class="lead">Every new kit comes in Cozy Workshop and Job Site. Same tabs, same formulas, both files in your download. Try them on this page.</p>
+      <div class="switch" role="group" aria-label="Color theme">
+        <button type="button" data-set="cozy" aria-pressed="true"><span class="dot" style="background:#6E4F4A"></span>Cozy Workshop</button>
+        <button type="button" data-set="jobsite" aria-pressed="false"><span class="dot" style="background:#E8652B"></span>Job Site</button>
+      </div>
+      <div class="swatches" aria-hidden="true">
+        <div><span style="background:#FAF6F0"></span><span style="background:#EBD9D3"></span><span style="background:#A8B5A0"></span><span style="background:#6E4F4A"></span> &nbsp;Cozy Workshop</div>
+        <div><span style="background:#F6F3EC"></span><span style="background:#C9C6BF"></span><span style="background:#4A6378"></span><span style="background:#E8652B"></span> &nbsp;Job Site</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <p class="kicker">The shop</p>
+        <h2>Pick your kit</h2>
+      </div>
+      <a class="btn ghost" href="https://www.etsy.com/shop/OrganizedOpsKits">See everything on Etsy</a>
+    </div>
+
+    <h3 class="group-title">For contractors and builders</h3>
+    <div class="grid" id="pro"></div>
+
+    <div class="bundle">
+      <div>
+        <p class="kicker">Best value</p>
+        <h2>Contractor Office Bundle</h2>
+        <ul>
+          <li>Subcontractor bid leveling</li>
+          <li>Change orders and AR tracker</li>
+          <li>Selections and allowance tracker</li>
+          <li>Closeout kit with punch list and warranty log</li>
+        </ul>
+      </div>
+      <div>
+        <p>Four kits in one download, for less than buying them one by one.</p>
+        <a class="btn" href="https://www.etsy.com/listing/4588138077">Get the bundle</a>
+      </div>
+    </div>
+
+    <h3 class="group-title">For your home</h3>
+    <div class="grid" id="home"></div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap center">
+    <p class="kicker">How it works</p>
+    <h2>Up and running in about 10 minutes</h2>
+    <div class="steps" style="text-align:left">
+      <div class="step"><h3>Buy on Etsy</h3><p>Checkout is through Etsy, so your payment info stays with Etsy.</p></div>
+      <div class="step"><h3>Download your files</h3><p>Your download is ready right after you buy. Open it in Excel or upload it to free Google Sheets.</p></div>
+      <div class="step"><h3>Follow the Quick Start</h3><p>Type in the white cells. The tinted cells fill in by themselves. A sample copy shows how it all works.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="custom" id="custom">
+  <div class="wrap">
+    <div>
+      <p class="kicker">Custom work</p>
+      <h2>Need it built your way?</h2>
+      <p class="lead">I can set up a kit for how your company actually runs.</p>
+      <ul class="checklist">
+        <li>Your logo and company name</li>
+        <li>Your job stages, trades and cost codes</li>
+        <li>Extra tabs or printables</li>
+        <li>A version for your whole team</li>
+      </ul>
+      <a class="btn" href="https://www.etsy.com/shop/OrganizedOpsKits">Message me on Etsy</a>
+      <p style="font-size:14px;color:var(--muted);margin-top:10px">On the shop page, tap the message button under the shop owner.</p>
+    </div>
+    <img src="img/dashboard.jpg" width="900" height="900" loading="lazy" alt="Planner dashboard close-up on a laptop with a note pointing to the overdue count">
+  </div>
+</section>
+
+<section class="alt" id="faq">
+  <div class="wrap">
+    <div class="center">
+      <p class="kicker">Questions</p>
+      <h2>Good to know</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Do I need Excel?</summary><p>No. Every kit works in Excel (2007 or newer) and in free Google Sheets. There are no macros.</p></details>
+      <details><summary>How do I get my files?</summary><p>It's an instant download. Etsy gives you the download right after you buy, and it stays in your Etsy purchases. Nothing ships.</p></details>
+      <details><summary>Can I use it on my phone or iPad?</summary><p>Yes, in the Google Sheets or Excel app. Setup is easiest on a computer.</p></details>
+      <details><summary>I'm not a spreadsheet person. Will this work for me?</summary><p>Yes. Each kit has a Quick Start, a filled-in sample copy, and clear white cells for your info. If you get stuck, message me on Etsy.</p></details>
+      <details><summary>What's the difference between the two color themes?</summary><p>Only the colors. Cozy Workshop is cream, blush and sage. Job Site is cream, gray and slate with orange accents. Kits made before the themes launched come in one look.</p></details>
+      <details><summary>Can I share the file with my team?</summary><p>Each purchase is for your own business or home. Message me on Etsy if you need a version for your whole team.</p></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <strong style="font-size:20px">OrganizedOpsKits</strong>
+      <p style="margin:8px 0 0;max-width:340px;opacity:.9">Spreadsheets built by someone who does ops for a living.</p>
+    </div>
+    <div>
+      <strong>Shop</strong>
+      <ul>
+        <li><a href="https://www.etsy.com/shop/OrganizedOpsKits">Etsy shop</a></li>
+        <li><a href="#custom">Custom work</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <strong>Follow along</strong>
+      <ul>
+        <li><a href="https://www.instagram.com/organizedopskits/">Instagram</a></li>
+        <li><a href="https://www.pinterest.com/organizedopskits/">Pinterest</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61595342727001">Facebook</a></li>
+      </ul>
+    </div>
+    <p class="small">© 2026 OrganizedOpsKits. Templates organize your records; they aren't tax, legal or accounting advice.</p>
+  </div>
+</footer>
+
+<script>
+var L = "https://www.etsy.com/listing/";
+var ICON = {
+  money:'<path d="M3 7h18v10H3z"/><circle cx="12" cy="12" r="2.5"/>',
+  doc:'<path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h6M9 17h6"/>',
+  cal:'<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+  users:'<circle cx="9" cy="8" r="3"/><path d="M3 20c0-3 3-5 6-5s6 2 6 5"/><path d="M16 5a3 3 0 0 1 0 6M21 20c0-2.5-1.5-4-3.5-4.7"/>',
+  check:'<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 9l2 2 4-4M8 16h8"/>',
+  home:'<path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/>',
+  ruler:'<path d="M3 17L17 3l4 4L7 21z"/><path d="M7 13l2 2M10 10l2 2M13 7l2 2"/>',
+  gift:'<rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 13h18M12 9v12M12 9c-3 0-5-1.5-4-3.5S12 6 12 9c0-3 3-5.5 4-3.5S15 9 12 9"/>',
+  fan:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2"/><path d="M12 10c0-4 3-5 4-3M14 12c4 0 5 3 3 4M12 14c0 4-3 5-4 3M10 12c-4 0-5-3-3-4"/>',
+  scale:'<path d="M12 3v18M5 21h14M5 7h14M5 7l-3 7h6zM19 7l-3 7h6z"/>',
+  party:'<path d="M4 20l5-13 8 8z"/><path d="M14 4l1 2M19 9l2-1M17 3l-1 3"/>'
+};
+var PRO = [
+  ["4588284533","Job Costing","Budget vs actual on every job, so you see profit before it's gone.","money"],
+  ["4588040457","Change Orders and AR","Log every change order and see who still owes you.","doc"],
+  ["4593781227","Sales Pipeline Tracker","See which estimates went cold, before they're gone.","users","New"],
+  ["4588290488","Construction Schedule","Gantt chart plus a 2-week lookahead for the crew.","cal"],
+  ["4588141568","Bid Leveling","Compare sub bids line by line, apples to apples.","scale"],
+  ["4588123137","Selections and Allowances","Track client picks against allowances, room by room.","check"],
+  ["4588128425","Closeout Kit","Punch list, warranty log and a homeowner manual.","check"],
+  ["4588264938","RFI, Submittal and Daily Log","Questions, approvals and the daily record in one file.","doc"],
+  ["4588285699","Lien Waivers and Pay Apps","Know which waivers are in before you cut the check.","doc"],
+  ["4588291568","HVAC Service Agreements","Renewals and PM visits, all on one schedule.","fan"],
+  ["4594856465","Renovation Takeoff Calculator","Materials, labor hours, job cost and a client-ready quote.","ruler","New"]
+];
+var HOME = [
+  ["4588764285","Home Maintenance Planner","109 tasks with how-tos, a tax tracker and printables.","home","2 themes"],
+  ["4589361926","Planner for New Home Buyers","A closing gift builders can hand over with the keys.","gift"],
+  ["4589814088","Realtor Closing Gift Edition","The planner, ready for an agent to give at closing.","gift"],
+  ["4594874360","Renovation Material Calculator","Paint, drywall and flooring amounts from your room sizes.","ruler","New"],
+  ["4593335368","Party Planner","Guests, RSVPs, budget, menu and a day-of checklist.","party"]
+];
+function card(p){
+  return '<a class="card" href="'+L+p[0]+'">'+
+    '<div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true">'+ICON[p[3]]+'</svg></div>'+
+    (p[4] ? '<span class="tag">'+p[4]+'</span>' : '')+
+    '<h3>'+p[1]+'</h3><p>'+p[2]+'</p><span class="go">View on Etsy →</span></a>';
+}
+document.getElementById("pro").innerHTML = PRO.map(card).join("");
+document.getElementById("home").innerHTML = HOME.map(card).join("");
+
+function setTheme(t){
+  document.documentElement.setAttribute("data-theme", t);
+  document.querySelectorAll(".switch button").forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.set === t ? "true" : "false"); });
+  try { localStorage.setItem("ook-theme", t); } catch(e) {}
+}
+document.querySelectorAll(".switch button").forEach(function(b){ b.addEventListener("click", function(){ setTheme(b.dataset.set); }); });
+try { var saved = localStorage.getItem("ook-theme"); if (saved === "jobsite" || saved === "cozy") setTheme(saved); } catch(e) {}
+</script>
+</body>
+</html>
