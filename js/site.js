@@ -17,3 +17,11 @@ try { var saved = localStorage.getItem("ook-theme"); if (saved === "jobsite" || 
   bar.classList.add('sale');
   bar.innerHTML = (last ? 'Last day: ' : 'Cyber Specials: ') + '30% off every template through Dec 1 · <a href="https://www.etsy.com/shop/OrganizedOpsKits">Shop on Etsy</a>';
 })();
+(function(){
+  var now=Date.now(), start=Date.parse('2026-11-23T00:00:00-05:00'), end=Date.parse('2026-12-01T23:59:59-05:00');
+  if(now<start || now>end) return;
+  document.querySelectorAll('.price-line').forEach(function(p){
+    var s=document.createElement('span'); s.className='sale'; s.textContent=' · 30% off on Etsy through Dec 1';
+    p.appendChild(s);
+  });
+})();
