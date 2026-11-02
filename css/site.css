@@ -174,3 +174,4 @@ footer .small { font-size:13px; opacity:.8; width:100%; border-top:1px solid rgb
 .bar.sale { background:var(--badge); color:var(--on-badge); }
 .bar.sale a { color:inherit; text-decoration:underline; }
 [data-theme="jobsite"] .bar.sale { background:var(--action); color:var(--on-action); border-bottom:3px solid var(--badge); }
+.bar a { color:inherit; text-decoration:underline; text-underline-offset:2px; }
