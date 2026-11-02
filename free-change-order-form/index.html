@@ -139,7 +139,7 @@
       err.classList.remove('show');
       if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){err.textContent='Please enter a valid email address.';err.classList.add('show');return;}
       var cb='mc'+Date.now();
-      var url='https://etsy.us19.list-manage.com/subscribe/post-json?u=0cb2217926b60025441dc7bd2&id=5eec13151f&f_id=0098c2e1f0&c='+cb+'&EMAIL='+encodeURIComponent(email)+'&tags='+f.dataset.tag+'&b_0cb2217926b60025441dc7bd2_5eec13151f=';
+      var url='https://etsy.us19.list-manage.com/subscribe/post-json?u=0cb2217926b60025441dc7bd2&id=5eec13151f&c='+cb+'&EMAIL='+encodeURIComponent(email)+'&tags='+f.dataset.tag+'&b_0cb2217926b60025441dc7bd2_5eec13151f=';
       var s=document.createElement('script');
       window[cb]=function(r){
         delete window[cb]; s.remove();
