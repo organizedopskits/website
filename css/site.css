@@ -190,3 +190,13 @@ footer .small { font-size:13px; opacity:.8; width:100%; border-top:1px solid rgb
 .grid.two { grid-template-columns:repeat(2, minmax(0,1fr)); max-width:800px; }
 @media (max-width: 700px) { .grid.two { grid-template-columns:1fr; } }
 .tile p a { display:inline-block; padding:4px 0; }
+.sched { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:18px; }
+.sched-card { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); padding:22px 24px 6px; }
+.sched-card h2 { font-size:24px; margin:0; }
+.sched-sub { margin:6px 0 0; color:var(--muted); font-size:15px; }
+.sched-card .checklist { margin:12px 0 10px; }
+.sched-card .checklist li { font-size:15px; }
+.only, .freq { display:inline-block; margin-left:6px; padding:1px 8px; font-size:12px; border-radius:999px; vertical-align:1px; white-space:nowrap; }
+.only { border:1px solid var(--badge); color:var(--text); }
+.freq { background:var(--panel-soft); color:var(--muted); }
+@media (max-width: 880px) { .sched { grid-template-columns:1fr; } .only, .freq { white-space:normal; } }
