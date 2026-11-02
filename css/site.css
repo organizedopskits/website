@@ -161,3 +161,13 @@ footer .small { font-size:13px; opacity:.8; width:100%; border-top:1px solid rgb
 @media (max-width: 560px) {
   .tiles, .figs, .steps.four { grid-template-columns:1fr; }
 }
+/* Free download signup */
+.signup { display:flex; gap:10px; flex-wrap:wrap; margin:18px 0 8px; max-width:520px; }
+.signup input[type=email] { flex:1 1 240px; padding:13px 14px; font-size:16px; border:1px solid var(--line); border-radius:var(--btn-radius); background:#fff; color:var(--text); font-family:inherit; }
+.signup button { cursor:pointer; font-family:inherit; }
+.signup-note { font-size:14px; color:var(--muted); margin:6px 0 0; }
+.signup-done { display:none; margin-top:14px; }
+.signup-done.show { display:block; }
+.signup-error { color:#9b2c2c; font-size:14px; margin:8px 0 0; display:none; }
+.signup-error.show { display:block; }
+.hp { position:absolute; left:-5000px; }
