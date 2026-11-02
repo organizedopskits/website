@@ -171,3 +171,6 @@ footer .small { font-size:13px; opacity:.8; width:100%; border-top:1px solid rgb
 .signup-error { color:#9b2c2c; font-size:14px; margin:8px 0 0; display:none; }
 .signup-error.show { display:block; }
 .hp { position:absolute; left:-5000px; }
+.bar.sale { background:var(--badge); color:var(--on-badge); }
+.bar.sale a { color:inherit; text-decoration:underline; }
+[data-theme="jobsite"] .bar.sale { background:var(--action); color:var(--on-action); border-bottom:3px solid var(--badge); }
