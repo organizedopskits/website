@@ -59,7 +59,7 @@
     <div>
       <p class="kicker">For contractors already on Salesforce</p>
       <h1>Estimate, build and bill every job in Salesforce</h1>
-      <p class="lead">Build estimates from your own price list. Win the job and the budget is ready. Track every cost code against subs and bills, price change orders from the same list, and send invoices on schedule. Homeowners approve change orders and see their project in a portal. All inside your own Salesforce.</p>
+      <p class="lead">Build estimates from your own price list. Win the job and the budget is ready. Track every cost code against subs and bills, price change orders from the same list, and bill each draw when it comes due. Homeowners approve change orders and see their project in a portal. All inside your own Salesforce.</p>
       <div class="actions">
         <a class="btn" href="mailto:organizedopskits@gmail.com?subject=Salesforce%20demo%20request">Book a demo</a>
         <a class="btn ghost" href="#modules">See what's inside</a>
@@ -79,7 +79,7 @@
       <div class="tile"><h3>Job budget by cost code</h3><p>Win the estimate and the job and its budget are created for you. Each cost code shows budget, committed, actual and what is left.</p></div>
       <div class="tile"><h3>Subs, POs and bills</h3><p>Subcontracts and material orders count as committed cost the day you issue them. Bills post as actual cost. A sub with no current insurance certificate can't be marked paid.</p></div>
       <div class="tile"><h3>Change orders</h3><p>Priced from the same list. The homeowner approves in the portal by typing their name, and the date and time are recorded. Approved cost goes straight into the job budget, and the price is locked.</p></div>
-      <div class="tile"><h3>Draws, invoices and payments</h3><p>Set a draw schedule. When a phase is finished, the draw is flagged ready to bill and you get a task. Invoices print with the balance due and contract-to-date totals.</p></div>
+      <div class="tile"><h3>Draws, invoices and payments</h3><p>Set a draw schedule. When a phase is finished, the draw is flagged ready to bill and you get a task. Invoices print with the balance due and contract-to-date totals. Retainage is recorded on the job but not held back on invoices yet.</p></div>
       <div class="tile"><h3>Schedule and daily logs</h3><p>Phases with dates and a late flag. Percent complete comes from the schedule. Daily logs record weather, crew and work done, with internal notes the homeowner never sees.</p></div>
       <div class="tile"><h3>Selections</h3><p>Every client choice against its allowance, with a decision deadline and an order-by date. Pick from the price list and the cost fills in.</p></div>
       <div class="tile"><h3>Punch list and warranty</h3><p>Items by room and trade, assigned to a sub, with due dates. After closing, homeowners submit warranty requests in the portal.</p></div>
@@ -102,7 +102,7 @@
       <li>Money owed to you, by job, with days past due.</li>
       <li>Approved change orders that were never billed. On the sample company that was $5,100 across four jobs.</li>
       <li>Every budget line that is over, and how much budget is still uncommitted.</li>
-      <li>Billed vs earned on each job, so you know if you are ahead or behind on billing.</li>
+      <li>Billed vs earned on each job, so you know if you are ahead or behind on billing. Earned is based on how many schedule phases are complete.</li>
       <li>Open estimates by stage, with the margin on each one.</li>
     </ul>
   </div>
@@ -124,13 +124,13 @@
 <section class="alt" id="automation">
   <div class="wrap"><div class="prose">
     <p class="kicker">Automation</p>
-    <h2>The follow-ups happen on their own</h2>
+    <h2>The follow-up tasks are made for you</h2>
     <ul class="checklist">
       <li>Win an estimate and the job, its budget lines and the project manager are set up for you.</li>
       <li>Pick an item from the price list on an estimate, change order or selection and the cost, price and cost code fill in.</li>
       <li>A change order's price comes from its lines. Once approved, its cost is added to the budget and it can't be quietly edited.</li>
       <li>Finish a schedule phase and the draw tied to it is flagged ready to bill, with a task to send the invoice.</li>
-      <li>Set a draw to Invoiced, or mark a change order billed, and the invoice is created.</li>
+      <li>Set a draw to Invoiced, or mark a change order billed, and a draft invoice is created. Review it, mark it Sent, then print or email the PDF.</li>
       <li>A homeowner approves or declines in the portal and you get a high-priority task right away.</li>
       <li>A sub's bill can't be marked paid without a current liability certificate on file.</li>
       <li>Every morning, a task lands on your list when a sub's insurance or license expires in 30 days, in 7 days, or today.</li>
@@ -167,9 +167,9 @@
     <p class="kicker">Questions</p>
     <h2>FAQ</h2>
     <details><summary>Do I need to already have Salesforce?</summary><p>Yes. This is set up inside your own Salesforce, on Enterprise or higher. Pro Suite is being tested now. If you're not on Salesforce yet, ask in the demo and we'll talk it through honestly.</p></details>
-    <details><summary>Does it replace QuickBooks?</summary><p>No. It runs the job side: estimates, budgets, change orders, draws and invoices, schedules and sub paperwork. Your books stay in QuickBooks. Invoices and bills here are for tracking the job, and your bookkeeper still records them in your accounting.</p></details>
+    <details><summary>Does it replace QuickBooks?</summary><p>No. It runs the job side: estimates, budgets, change orders, draws and invoices, schedules and sub paperwork. Your books stay in QuickBooks. There is no automatic sync: your bookkeeper enters invoices, payments and bills there. There is no crew time tracking yet, and field crews use the Salesforce mobile app. Invoices and bills here are for tracking the job, and your bookkeeper still records them in your accounting.</p></details>
     <details><summary>Can we change it?</summary><p>Yes. It's built with standard Salesforce objects, fields and flows, so your admin, or we, can add fields, change picklists and adjust the automation.</p></details>
-    <details><summary>We use your spreadsheets now. What happens to that data?</summary><p>The setup uses the same fields as the OrganizedOpsKits spreadsheets, so we can import your jobs, change orders and subs during setup.</p></details>
+    <details><summary>We use your spreadsheets now. What happens to that data?</summary><p>We can import your jobs, change orders and subs from your spreadsheets during setup.</p></details>
     <details><summary>Is this made by Salesforce?</summary><p>No. It's an independent setup built on the Salesforce platform. Salesforce is a trademark of Salesforce, Inc.</p></details>
   </div>
 </section>
